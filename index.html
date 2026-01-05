@@ -1,77 +1,567 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer Contact</title>
-    <style>
-        body{ background-color: rgb(52, 51, 51);}
-        .footer{ width: 200px; padding: 80px 0;}
-        .bar{width: 1150px; margin: auto; background: white; padding: 35px; display: flex; align-items: center; justify-content:space-between; height 160px}
-        .left{ font-size: 14px; color: black; font-family :Verdana,Geneva,Tahoma,sans-serif; }
-        .contact-center h1{ font-size: 35px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 500; position: relative; text-decoration: underline yellow;}
-        .contact-btn{ width: 40px; height: 40px; background-color: yellow; border-radius: 52px;display: flex;align-items: center;justify-content: center;}
-         .footer-bottom{ width: 1150px; margin: auto; background: black; padding: 37px; display: flex; color: #aaa; gap: 11px; justify-content: space-between;}
-         .footer-col{ width: 22% 23% 24% ; font-size: 17px;}
+<meta charset="UTF-8">
+<title>Design Agency</title>
 
-         .footer-col h1{ color: #fff; margin-bottom: 7px;}
-          .footer-col p{ color: #fff;}
-          .footer-col  h4{ color: #fff; margin-bottom: 18px;}
-           .footer-col a{ display: block; margin-top: 12px; color: #fbf2f2}
-           .social { display: flex; gap: 12px;}
-           .social button{ border: 1px solid black; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-color: #282626; color: #fff; font-size: larger; font-weight: bolder;}
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background:#fff;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+}
+
+.logo{
+    font-size:22px;
+    
+}
+.logo span{
+    color:#22c55e;
+}
+
+nav a{
+    margin:0 15px;
+    text-decoration:none;
+    color:black;
+}
+
+.login{
+    border:1px solid #22c55e;
+    background:transparent;
+    padding:6px 14px;
+    border-radius: 7px;
+}
+
+.register{
+    background:#22c55e;
+    color:white;
+    padding:7px 16px;
+    border-radius: 7px;
+    border-color: #f9f5f5;
+}
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#dcfce7;
+    padding:60px 80px;
+}
+
+.hero-text{
+    width:50%;
+}
+
+.hero-text h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero-text p{
+    margin-bottom:20px;
+}
+
+.btn{
+    background:#22c55e;
+    border-radius: 8px ;
+    color:white;
+    padding:10px 25px;
+}
+
+.hero-image img{
+    width: 600px;  ;
+}
+.brands{
+   
+    text-align:center;
+    padding:0px;
+    width: 300;
+}
+
+.brands img{
+    width:80%;
+}
+.services{  
+    
+    padding:70px;
+    text-align:left;
+}
+
+.services h2{
+    margin-bottom:40px;
+}
+
+.service-boxes{
+    display:flex;
+    justify-content:space-between;
+}
+
+.box{
+    width:30%;
+}
+
+.box img{
+    width:50px;
+    margin-bottom:15px;
+}
+
+.box h3{
+    margin-bottom:10px;
+}
+
+.box a{
+    text-decoration:none;
+    color:#22c55e;
+}
+
+.portfolio{
+    padding:80px;
+}
+
+.portfolio h2{
+    text-align:left;
+    margin-bottom:40px;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.card img{
+    width:100%;
+}
+
+.card h4{
+    margin:10px 0;
+}
+
+.user img{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  object-fit:cover;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-tag {
+    color: #3cb371;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 32px;
+    margin: 10px 0 40px;
+    color: #222;
+}
+/* ===== TESTIMONIALS SECTION ONLY ===== */
+
+.container > .section-tag {
+    color: #3cb371;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.container > h2 {
+    font-size: 28px;
+    color: #222;
+    text-align: center;
+    margin: 10px 0 40px;
+}
+
+/* ONLY the row with 3 cards */
+.container > .testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+/* ONLY these 3 cards */
+.container > .testimonials > .card {
+    background: #ffffff;
+    width: 300px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+/* text */
+.container > .testimonials > .card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+/* user info */
+.container > .testimonials > .card .user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.container > .testimonials > .card .user img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container > .testimonials > .card .user h4 {
+    font-size: 15px;
+    margin: 0;
+    color: #222;
+}
+
+.container > .testimonials > .card .user span {
+    font-size: 13px;
+    color: #888;
+}
+/* Subscribe Section */
+.subscribe {
+    margin-top: 80px;
+}
+
+.subscribe p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.subscribe-box {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+.subscribe-box input {
+    flex: 1;
+    padding: 14px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.subscribe-box button {
+    padding: 14px 25px;
+    border: none;
+    background: #ff5722;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+}
+
+.subscribe-box button:hover {
+    background: #e64a19;
+}
+/* Responsive */
+@media (max-width: 992px) {
+    .container > .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.footer {
+  background-color: #00c97b;
+  color: #000;
+  padding: 60px 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-box {
+  flex: 1;
+  min-width: 220px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.footer-box h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 10px;
+}
+
+.footer-box ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.footer-box ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #08b742;
+  color: #ebf6f2;
+  margin-right: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-icons a:hover {
+  background: #000;
+  color: #f9f5f5;
+}
 
 
+.footer-bottom {
+  text-align: left;
+  margin-top: 40px;
+  font-size: 13px;
+}
+</style>
 
-    </style>
 </head>
 <body>
-    <footer class="footer">
-                <div class="bar">
-                    <div class="left">
-                        Heard <br>Enough?
-                    </div>
-                    <div class="contact-center">
-                        <h1 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 80px;"> Contact us </h1>
-                    </div>
-                    <div class="contact-btn">
-                        →
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="footer-col">
-                        <h1>The agency <br>for impatient <br>brands®</h1>
-                    </div>
-                    <div class="footer-col">
-                        <h4> LONDON</h4> <br>
-                        <p style="text-decoration: underline;"> newbuisness@weareimpero.com</p> <p> +44 20 7890 7571 <br>
-                           Unit 306, Metropolitan Wharf <br>
-                           70 Wapping Wall,London E1W 3SS <br><br>
-                        <a href="#"> SEE ON MAP </a></p>
-                    </div>
-<div class="footer-col"> 
-    <h4> BUENOS AIRES</h4> <br>
-     <p style="text-decoration: underline;">newbuisness@weareimoero.com</p>
-     <p> +54 11 6789 7846 <br> Cabido 1458 1st floor
-     Buenos Aires <br> <br></p>
+<header class="navbar">
+    <img src="designagency.jpeg" alt="">
+    <nav>
+        <a href="#">Services</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <button class="login">Login</button>
+        <button class="register">Register</button>
+    </nav>
+</header>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Increase Your <br> Customers Loyalty <br> and Satisfaction</h1>
+        <p>
+            We help businesses like yours earn more customers,
+            standout from competitors, make more money
+        </p>
+        <button class="btn">Get Started</button>
+    </div>
+
+    <div class="hero-image">
+        <img src="girl.jpeg" alt="">
+    </div>
+</section>
+<div class="brands">
+    <img src=" image2.jpeg" alt="">
 </div>
-                    <div class="footer-col"> <br> <br> 
-                     <p> WANT TO BE THE SMARTEST <br> IN YOUR OFFICE? </p>
-                    <p style="text-decoration: underline;"> SIGN UP FOR OUR NEWSLETTER </p> <br>
-                     <h4>FOLLOW US</h4>
-                    <div class="social">
-                        <button> Be</button>
-                        <button>in</button>
-                        <button>be</button>
-                        <button>ig</button>
+<section class="services">
+    <h4 style="font-family: Georgia, 'Times New Roman', Times, serif;">what we do</h4>
+    <h2>We provide the Perfect Solution to your business growth</h2>
 
-                    </div>
+    <div class="service-boxes">
+        <div class="box">
+            <img src="icon2.jpeg" alt="">
+            <h3>Grow Your Business</h3>
+            <p>We help identify the best ways to improve your business</p>
+            <a href="#">Learn More →</a>
+        </div>
+
+        <div class="box">
+            <img src="icon3.jpeg">
+            <h3>Improve brand loyalty</h3>
+            <p>We help identify the best ways to improve your business</p>
+            <a href="#">Learn More →</a>
+        </div>
+
+        <div class="box">
+            <img src="icon1.jpeg" alt="">
+            <h3>Improve Business Model</h3>
+            <p>We help identify the best ways to improve your business</p>
+            <a href="#">Learn More →</a>
+        </div>
+    </div>
+</section>
+<div > <img src="project.jpeg" alt=""></div>
+<section class="portfolio">
+    <h4 style="font-family: Georgia, 'Times New Roman', Times, serif;">our portfolio</h4>
+    <h2>We provide the Perfect Solution to your business growth</h2>
+   
+    <div class="portfolio-grid">
+        <div class="card">
+            <img src="image4.jpeg">
+            <h3>Digital Marketing Agency Website</h3>
+            <p>This is a website for a client who wants to achieve their goals.</p>
+        </div>
+
+        <div class="card">
+            <img src="image5.jpeg">
+            <h3>Digital Marketing Agency Website</h3>
+            <p>This is a website for a client who wants to achieve their goals.</p>
+        </div>
+
+        <div class="card">
+            <img src="image6.jpeg">
+            <h3>Digital Marketing Agency Website</h3>
+            <p>This is a website for a client who wants to achieve their goals.</p>
+        </div>
+
+        <div class="card">
+            <img src="image3.jpeg">
+            <h3>Digital Marketing Agency Website</h3>
+            <p>This is a website for a client who wants to achieve their goals.</p>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="section-tag">TESTIMONIALS</div>
+    <h2>See What Our Customer<br>Say About Us</h2>
+
+    <div class="testimonials">
+        <div class="card">
+            <p>
+                Thank you for your service, I am very pleased with the result.
+                I have experienced growth in my business.
+            </p>
+            <div class="user">
+                <img src="imageee.jpeg" alt="">
+                <div>
+                    <h4>Emily Doren</h4>
+                    <span>CEO, Marketing Guru</span>
                 </div>
-
             </div>
         </div>
 
-    </footer>
+        <div class="card">
+            <p>
+                Thank you for your service, I am very pleased with the result.
+                I have experienced growth in my business.
+            </p>
+            <div class="user">
+                <img src="imageee.jpeg" alt="">
+                <div>
+                    <h4>Emily Doren</h4>
+                    <span>CEO, Marketing Guru</span>
+                </div>
+            </div>
+        </div>
 
+        <div class="card">
+            <p>
+                Thank you for your service, I am very pleased with the result.
+                I have experienced growth in my business.
+            </p>
+            <div class="user">
+                <img src="imageee.jpeg" alt="">
+                <div>
+                    <h4>Emily Doren</h4>
+                    <span>CEO, Marketing Guru</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="subscribe">
+        <div class="section-tag">SUBSCRIBE</div>
+        <h2>Subscribe To Get The Latest<br>News About Us</h2>
+        <p>We recommend you to subscribe to our newsletter.</p>
+
+        <div class="subscribe-box">
+            <input type="email" placeholder="Enter your email address">
+            <button>Subscribe</button>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2 class="logo">WEB LOGO</h2>
+      <p class="footer-text">
+        Some footer text about the <br>Agency. Just a little description
+        to <br> help people understand you better.
+      </p>
+
+      <div class="social-icons">
+        <a href="#">f</a>
+    <a href="#">T</a>
+    <a href="3">In</a>
+    </div>
+    </div>
+
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-box">
+      <h3>Address</h3>
+      <p>
+        Design Agency Head Office.<br>
+        Airport Road<br>
+        United Arab Emirates
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    Copyright Design Agency 2022
+  </div>
+</footer>
 </body>
 </html>
