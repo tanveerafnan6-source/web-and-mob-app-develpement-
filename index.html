@@ -2,566 +2,160 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Design Agency</title>
+<title>Rule The Exchange</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
+
 body{
-    background:#fff;
+  background:#000;
 }
 
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 80px;
+.exchange{
+  position:relative;
+  padding:80px 20px 140px;
+  background:linear-gradient(135deg,#479cf7, rgb(32, 32, 247));
+  text-align:center;
+  color:#fdfcfc;
+  overflow:hidden;
 }
 
-.logo{
-    font-size:22px;
-    
-}
-.logo span{
-    color:#22c55e;
+.exchange h2{
+  font-size:32px;
+  margin-bottom:50px;
 }
 
-nav a{
-    margin:0 15px;
-    text-decoration:none;
-    color:black;
+.cards{ 
+  max-width:850px;
+  margin:0 auto 60px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+.card{ 
+  background:#fff;
+  border-radius:3px;
+  padding:25px;
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+  text-align:left;
+  box-shadow:0 15px 30px rgba(0,0,0,0.15);
+  transition:0.4s ease;
 }
 
-.login{
-    border:1px solid #22c55e;
-    background:transparent;
-    padding:6px 14px;
-    border-radius: 7px;
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 45px rgba(0,0,0,0.25);
 }
 
-.register{
-    background:#22c55e;
-    color:white;
-    padding:7px 16px;
-    border-radius: 7px;
-    border-color: #f9f5f5;
-}
-.hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#dcfce7;
-    padding:60px 80px;
+
+.card img{ margin-top: 20px;
+  width:55px;
+  height:auto;
+  flex-shrink:0;
 }
 
-.hero-text{
-    width:50%;
+
+.card h3{
+  font-size:19px;
+  color:#333;
+  margin-bottom:8px;
 }
 
-.hero-text h1{
-    font-size:42px;
-    margin-bottom:15px;
+.card p{
+  font-size:16px;
+  color:#666;
+  line-height:1.6;
 }
 
-.hero-text p{
-    margin-bottom:20px;
+.bottom-text{
+  font-size:20px;
+  margin-bottom:27px;
 }
 
 .btn{
-    background:#22c55e;
-    border-radius: 8px ;
-    color:white;
-    padding:10px 25px;
+  display:inline-block;
+  padding:15px 35px;
+  background-color: rgb(36, 215, 99);
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+  transition:0.3s;
 }
 
-.hero-image img{
-    width: 600px;  ;
-}
-.brands{
-   
-    text-align:center;
-    padding:0px;
-    width: 300;
+.btn:hover{
+  background:#1ad51a;
+  transform:scale(1.05);
 }
 
-.brands img{
-    width:80%;
-}
-.services{  
-    
-    padding:70px;
-    text-align:left;
-}
-
-.services h2{
-    margin-bottom:40px;
+.wave{
+  position:absolute;
+  bottom:-1px;
+  left:0;
+  width:100%;
+  height:100px;
+  background:#000;
+  border-top-left-radius:100% 60px;
+  border-top-right-radius:100% 60px;
 }
 
-.service-boxes{
-    display:flex;
-    justify-content:space-between;
-}
-
-.box{
-    width:30%;
-}
-
-.box img{
-    width:50px;
-    margin-bottom:15px;
-}
-
-.box h3{
-    margin-bottom:10px;
-}
-
-.box a{
-    text-decoration:none;
-    color:#22c55e;
-}
-
-.portfolio{
-    padding:80px;
-}
-
-.portfolio h2{
-    text-align:left;
-    margin-bottom:40px;
-}
-
-.portfolio-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:30px;
-}
-
-.card img{
-    width:100%;
-}
-
-.card h4{
-    margin:10px 0;
-}
-
-.user img{
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  object-fit:cover;
-}
-body {
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.section-tag {
-    color: #3cb371;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-h2 {
-    font-size: 32px;
-    margin: 10px 0 40px;
-    color: #222;
-}
-/* ===== TESTIMONIALS SECTION ONLY ===== */
-
-.container > .section-tag {
-    color: #3cb371;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-align: center;
-}
-
-.container > h2 {
-    font-size: 28px;
-    color: #222;
-    text-align: center;
-    margin: 10px 0 40px;
-}
-
-/* ONLY the row with 3 cards */
-.container > .testimonials {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 80px;
-}
-
-/* ONLY these 3 cards */
-.container > .testimonials > .card {
-    background: #ffffff;
-    width: 300px;
-    padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    text-align: left;
-}
-
-/* text */
-.container > .testimonials > .card p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 18px;
-}
-
-/* user info */
-.container > .testimonials > .card .user {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.container > .testimonials > .card .user img {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.container > .testimonials > .card .user h4 {
-    font-size: 15px;
-    margin: 0;
-    color: #222;
-}
-
-.container > .testimonials > .card .user span {
-    font-size: 13px;
-    color: #888;
-}
-/* Subscribe Section */
-.subscribe {
-    margin-top: 80px;
-}
-
-.subscribe p {
-    color: #777;
-    margin-bottom: 25px;
-}
-
-.subscribe-box {
-    display: flex;
-    justify-content: center;
-    max-width: 500px;
-    margin: auto;
-}
-
-.subscribe-box input {
-    flex: 1;
-    padding: 14px;
-    border-radius: 8px 0 0 8px;
-    border: 1px solid #ddd;
-    outline: none;
-}
-
-.subscribe-box button {
-    padding: 14px 25px;
-    border: none;
-    background: #ff5722;
-    color: #fff;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 0 8px 8px 0;
-}
-
-.subscribe-box button:hover {
-    background: #e64a19;
-}
-/* Responsive */
-@media (max-width: 992px) {
-    .container > .testimonials {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-.footer {
-  background-color: #00c97b;
-  color: #000;
-  padding: 60px 40px 20px;
-  font-family: Arial, sans-serif;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.footer-box {
-  flex: 1;
-  min-width: 220px;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.footer-text {
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-.footer-box h3 {
-  font-size: 16px;
-  margin-bottom: 15px;
-}
-
-.footer-box ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-box ul li {
-  margin-bottom: 10px;
-}
-
-.footer-box ul li a {
-  text-decoration: none;
-  color: #000;
-  font-size: 14px;
-}
-
-.footer-box ul li a:hover {
-  text-decoration: underline;
-}
-
-.social-icons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #08b742;
-  color: #ebf6f2;
-  margin-right: 8px;
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.social-icons a:hover {
-  background: #000;
-  color: #f9f5f5;
-}
-
-
-.footer-bottom {
-  text-align: left;
-  margin-top: 40px;
-  font-size: 13px;
+@media(max-width:768px){
+  .cards{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 
 </head>
 <body>
-<header class="navbar">
-    <img src="designagency.jpeg" alt="">
-    <nav>
-        <a href="#">Services</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
-        <button class="login">Login</button>
-        <button class="register">Register</button>
-    </nav>
-</header>
-<section class="hero">
-    <div class="hero-text">
-        <h1>Increase Your <br> Customers Loyalty <br> and Satisfaction</h1>
+
+<section class="exchange">
+
+  <h2>Rule The Exchange</h2>
+
+  <div class="cards">
+
+    
+    <div class="card">
+      <img src="book.jpeg"  alt="Book">
+      <div>
+        <h3>Knowledge Base</h3>
         <p>
-            We help businesses like yours earn more customers,
-            standout from competitors, make more money
+          Sharpen up your trading know-how <br>with our comprehensive Knowledge <br> Base
+          containing helpful instructions <br> and tutorials.
         </p>
-        <button class="btn">Get Started</button>
+      </div>
     </div>
 
-    <div class="hero-image">
-        <img src="girl.jpeg" alt="">
-    </div>
-</section>
-<div class="brands">
-    <img src=" image2.jpeg" alt="">
-</div>
-<section class="services">
-    <h4 style="font-family: Georgia, 'Times New Roman', Times, serif;">what we do</h4>
-    <h2>We provide the Perfect Solution to your business growth</h2>
-
-    <div class="service-boxes">
-        <div class="box">
-            <img src="icon2.jpeg" alt="">
-            <h3>Grow Your Business</h3>
-            <p>We help identify the best ways to improve your business</p>
-            <a href="#">Learn More →</a>
-        </div>
-
-        <div class="box">
-            <img src="icon3.jpeg">
-            <h3>Improve brand loyalty</h3>
-            <p>We help identify the best ways to improve your business</p>
-            <a href="#">Learn More →</a>
-        </div>
-
-        <div class="box">
-            <img src="icon1.jpeg" alt="">
-            <h3>Improve Business Model</h3>
-            <p>We help identify the best ways to improve your business</p>
-            <a href="#">Learn More →</a>
-        </div>
-    </div>
-</section>
-<div > <img src="project.jpeg" alt=""></div>
-<section class="portfolio">
-    <h4 style="font-family: Georgia, 'Times New Roman', Times, serif;">our portfolio</h4>
-    <h2>We provide the Perfect Solution to your business growth</h2>
-   
-    <div class="portfolio-grid">
-        <div class="card">
-            <img src="image4.jpeg">
-            <h3>Digital Marketing Agency Website</h3>
-            <p>This is a website for a client who wants to achieve their goals.</p>
-        </div>
-
-        <div class="card">
-            <img src="image5.jpeg">
-            <h3>Digital Marketing Agency Website</h3>
-            <p>This is a website for a client who wants to achieve their goals.</p>
-        </div>
-
-        <div class="card">
-            <img src="image6.jpeg">
-            <h3>Digital Marketing Agency Website</h3>
-            <p>This is a website for a client who wants to achieve their goals.</p>
-        </div>
-
-        <div class="card">
-            <img src="image3.jpeg">
-            <h3>Digital Marketing Agency Website</h3>
-            <p>This is a website for a client who wants to achieve their goals.</p>
-        </div>
-    </div>
-</section>
-<div class="container">
-    <div class="section-tag">TESTIMONIALS</div>
-    <h2>See What Our Customer<br>Say About Us</h2>
-
-    <div class="testimonials">
-        <div class="card">
-            <p>
-                Thank you for your service, I am very pleased with the result.
-                I have experienced growth in my business.
-            </p>
-            <div class="user">
-                <img src="imageee.jpeg" alt="">
-                <div>
-                    <h4>Emily Doren</h4>
-                    <span>CEO, Marketing Guru</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <p>
-                Thank you for your service, I am very pleased with the result.
-                I have experienced growth in my business.
-            </p>
-            <div class="user">
-                <img src="imageee.jpeg" alt="">
-                <div>
-                    <h4>Emily Doren</h4>
-                    <span>CEO, Marketing Guru</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <p>
-                Thank you for your service, I am very pleased with the result.
-                I have experienced growth in my business.
-            </p>
-            <div class="user">
-                <img src="imageee.jpeg" alt="">
-                <div>
-                    <h4>Emily Doren</h4>
-                    <span>CEO, Marketing Guru</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="subscribe">
-        <div class="section-tag">SUBSCRIBE</div>
-        <h2>Subscribe To Get The Latest<br>News About Us</h2>
-        <p>We recommend you to subscribe to our newsletter.</p>
-
-        <div class="subscribe-box">
-            <input type="email" placeholder="Enter your email address">
-            <button>Subscribe</button>
-        </div>
-    </div>
-</div>
-
-<footer class="footer">
-  <div class="footer-container">
-
-    <div class="footer-box">
-      <h2 class="logo">WEB LOGO</h2>
-      <p class="footer-text">
-        Some footer text about the <br>Agency. Just a little description
-        to <br> help people understand you better.
-      </p>
-
-      <div class="social-icons">
-        <a href="#">f</a>
-    <a href="#">T</a>
-    <a href="3">In</a>
-    </div>
-    </div>
-
-    <div class="footer-box">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
-    <div class="footer-box">
-      <h3>Address</h3>
-      <p>
-        Design Agency Head Office.<br>
-        Airport Road<br>
-        United Arab Emirates
-      </p>
+    
+    <div class="card">
+      <img src="dots.2img.jpeg" alt="Book">
+      <div>
+        <h3>24/7 Support</h3>
+        <p>
+          We're here for you when you need <br> us with 24/7 support via both live <br> chat
+          and help desk.
+        </p>
+      </div>
     </div>
 
   </div>
+<br> <br>
+  <h6 class="bottom-text">
+    You'll wonder how you ever<br>lived without us
+  </h6>
 
-  <div class="footer-bottom">
-    Copyright Design Agency 2022
-  </div>
-</footer>
+  <a href="#" class="btn">Get Started for Free</a>
+
+  
+
+</section>
+
 </body>
 </html>
